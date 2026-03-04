@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Tatjana Grigojanova PhD.</title>
+  <meta name="description" content="Kontaktujte nás pre profesionálne prekladateľské služby. Telefón: +421 905 646 524, Email: grigojanova@yas.sh">
+  <link rel="canonical" href="https://grigojanova.yas.sh/contact.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Anti-FOUC: Prevent flash of unstyled content -->
+  <style>
+    .reveal, .reveal-left, .reveal-right, .reveal-scale {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+    .no-js .reveal, .no-js .reveal-left, .no-js .reveal-right, .no-js .reveal-scale,
+    html.js-loaded .reveal, html.js-loaded .reveal-left, html.js-loaded .reveal-right, html.js-loaded .reveal-scale {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    [data-counter] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    html.js-loaded [data-counter] {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Anti-FOUC script -->
+  <script>
+    (function() {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <a href="#main-content" class="skip-link" data-i18n="nav.skipToContent">Preskočiť na obsah</a>
+  
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Tatjana Grigojanova PhD. - Domov">
+        <img src="assets/images/logo.png" alt="" width="44" height="44">
+        <div class="logo-text">
+          <span class="logo-name">Tatjana Grigojanova</span>
+          <span class="logo-title" data-i18n="hero.badge">PhD.</span>
+        </div>
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+        <a href="index.html" data-i18n="nav.home">Domov</a>
+        <a href="about.html" data-i18n="nav.about">O nás</a>
+        <a href="services.html" data-i18n="nav.services">Služby</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Cenník</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact" aria-current="page">Kontakt</a>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Výber jazyka">
+          <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')" aria-label="Slovenčina">
+            <img src="assets/images/flag-sk.png" alt="" class="lang-flag" width="20" height="14"><span>SK</span>
+          </button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">
+            <img src="assets/images/flag-gb.png" alt="" class="lang-flag" width="20" height="14"><span>EN</span>
+          </button>
+          <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')" aria-label="Русский">
+            <img src="assets/images/flag-ru.png" alt="" class="lang-flag" width="20" height="14"><span>RU</span>
+          </button>
+        </div>
+        
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Prepnúť tmavý režim">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        
+        <a href="contact.html" class="btn btn-primary btn-cta" data-i18n="nav.cta">Kontaktujte nás</a>
+        
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobilná navigácia" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav">
+        <a href="index.html" data-i18n="nav.home">Domov</a>
+        <a href="about.html" data-i18n="nav.about">O nás</a>
+        <a href="services.html" data-i18n="nav.services">Služby</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Cenník</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="mobile-lang-switcher">
+        <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')"><img src="assets/images/flag-sk.png" alt="" class="lang-flag"><span>Slovenčina</span></button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')"><img src="assets/images/flag-gb.png" alt="" class="lang-flag"><span>English</span></button>
+        <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')"><img src="assets/images/flag-ru.png" alt="" class="lang-flag"><span>Русский</span></button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-header-content reveal">
+          <span class="section-label" data-i18n="contact.label">KONTAKT</span>
+          <h1 id="page-title" class="page-title" data-i18n="contact.title">Ako vám môžem pomôcť?</h1>
+          <p class="page-subtitle" data-i18n="contact.subtitle">Ak máte akékoľvek otázky, neváhajte nás kontaktovať</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" aria-labelledby="contact-content">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Contact Info -->
+          <aside class="contact-info reveal">
+            <div class="contact-card">
+              <h3 class="contact-card-title" data-i18n="contact.info.phone">Telefón</h3>
+              <a href="tel:+421905646524" class="contact-card-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +421 905 646 524
+              </a>
+            </div>
+            
+            <div class="contact-card">
+              <h3 class="contact-card-title" data-i18n="contact.info.email">Email</h3>
+              <a href="mailto:grigojanova@yas.sh" class="contact-card-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <path d="M22 6l-10 7L2 6"/>
+                </svg>
+                grigojanova@yas.sh
+              </a>
+            </div>
+            
+            <div class="contact-card">
+              <h3 class="contact-card-title" data-i18n="contact.info.address">Adresa</h3>
+              <p class="contact-card-text">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span data-i18n="contact.addressValue">Nové Súty, Bratislava, BA III, 831 06</span>
+              </p>
+            </div>
+            
+            <div class="contact-card contact-card-highlight">
+              <h3 class="contact-card-title" data-i18n="contact.info.legal">Právne informácie</h3>
+              <p class="contact-card-text">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+                <span data-i18n="contact.legalValue">Reg. č. 970285 - Ministerstvo spravodlivosti SR</span>
+              </p>
+            </div>
+          </aside>
+          
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper reveal delay-200">
+            <h2 class="form-title" data-i18n="contact.form.title">Napíšte nám</h2>
+            
+            <!-- Bidirectional Language Badge -->
+            <div class="lang-pair-badge">
+              <span class="lang-badge-sk">Slovak</span>
+              <span class="lang-badge-arrows">↔</span>
+              <span class="lang-badge-ru">Russian</span>
+            </div>
+            <p class="lang-pair-subtitle" data-i18n="contact.langPairSubtitle">Professional Translation & Interpreting in Both Directions</p>
+
+            <form id="contactForm" class="contact-form" action="#" method="POST">
+              <!-- Honeypot -->
+              <input type="text" name="website" id="website" autocomplete="off"
+                     style="position:absolute; left:-9999px; height:0; width:0;" tabindex="-1">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label" data-i18n="contact.form.name">Vaše meno</label>
+                  <input type="text" id="name" name="name" class="form-input" data-i18n-attr="placeholder" data-i18n="contact.form.namePlaceholder" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email" class="form-label" data-i18n="contact.form.email">Váš email</label>
+                  <input type="email" id="email" name="email" class="form-input" data-i18n-attr="placeholder" data-i18n="contact.form.emailPlaceholder" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label" data-i18n="contact.form.subject">Predmet</label>
+                <input type="text" id="subject" name="subject" class="form-input" data-i18n-attr="placeholder" data-i18n="contact.form.subjectPlaceholder" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  <span data-i18n="contact.form.message">Vaša správa</span>
+                  <span class="form-label-optional" data-i18n="contact.form.messageOptional">(nepovinné)</span>
+                </label>
+                <textarea id="message" name="message" class="form-textarea" rows="5" data-i18n-attr="placeholder" data-i18n="contact.form.messagePlaceholder" required></textarea>
+              </div>
+              
+              <!-- File Upload -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="contact.form.fileUpload">Prílohy</label>
+                <div class="file-upload" id="dropZone">
+                  <input type="file" id="fileUpload" name="attachments" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.xls,.xlsx,.csv" hidden>
+                  <div class="file-upload-content">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p class="file-upload-text" data-i18n="contact.form.dragDrop">Pretiahnite súbory sem alebo kliknite pre výber</p>
+                    <p class="file-upload-hint" data-i18n="contact.form.fileHint">PDF, DOC, DOCX, JPG, PNG, XLS, CSV. Max 5MB na súbor, celkom 25MB.</p>
+                  </div>
+                </div>
+                <div class="file-list" id="fileList"></div>
+              </div>
+              
+              <!-- Turnstile token holder -->
+              <input type="hidden" name="cf-turnstile-response" id="tsToken" value="">
+              
+              <!-- Turnstile Widget -->
+              <div class="turnstile-container">
+                <div class="cf-turnstile"
+                     data-sitekey="0x4AAAAAACkZFZIqRTJvAuJ-"
+                     data-callback="onTurnstile"
+                     data-expired-callback="onTurnstileExpired"
+                     data-error-callback="onTurnstileError"></div>
+              </div>
+              
+              <!-- Status Message -->
+              <div class="form-status" id="contactStatus" role="status" aria-live="polite" style="display:none;"></div>
+              
+              <button type="submit" class="btn btn-primary btn-lg btn-full" id="sendBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+                <span id="sendBtnText" data-i18n="contact.form.submit">Odoslať správu</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label" data-i18n="faq.label">FAQ</span>
+          <h2 id="faq-title" class="section-title" data-i18n="faq.title">Často kladené otázky</h2>
+        </div>
+        
+        <div class="faq-grid">
+          <details class="faq-item reveal delay-100">
+            <summary class="faq-question">
+              <span data-i18n="faq.q1.question">Aké dokumenty prekladáte?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q1.answer">
+              Prekladám širokú škálu dokumentov vrátane rodných listov, sobášnych listov, diplomov, právnych zmlúv, súdnych rozhodnutí, policajných správ a obchodných dokumentov.
+            </div>
+          </details>
+          
+          <details class="faq-item reveal delay-200">
+            <summary class="faq-question">
+              <span data-i18n="faq.q2.question">Ako dlho trvá preklad?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q2.answer">
+              Štandardné dokumenty sú zvyčajne hotové do 24-48 hodín. Pre rozsiahlejšie projekty alebo expresné preklady vám pripravíme individuálnu cenovú ponuku.
+            </div>
+          </details>
+          
+          <details class="faq-item reveal delay-300">
+            <summary class="faq-question">
+              <span data-i18n="faq.q3.question">Sú vaše preklady úradne uznané?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q3.answer">
+              Áno, som registrovaný prekladateľ pri Ministerstve spravodlivosti SR (č. 970285), takže moje preklady majú úradnú platnosť na všetkých úradoch na Slovensku.
+            </div>
+          </details>
+          
+          <details class="faq-item reveal delay-100">
+            <summary class="faq-question">
+              <span data-i18n="faq.q4.question">Ako prebieha tlmočenie?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q4.answer">
+              Tlmočenie je možné osobne na mieste alebo online prostredníctvom videohovoru. Pre súdne a policajné tlmočenie je potrebná moja prítomnosť.
+            </div>
+          </details>
+          
+          <details class="faq-item reveal delay-200">
+            <summary class="faq-question">
+              <span data-i18n="faq.q5.question">Aké sú možnosti platby?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q5.answer">
+              Akceptujem platbu v hotovosti, bankovým prevodom alebo kartou. Pre firemných klientov ponúkam aj fakturáciu so splatnosťou.
+            </div>
+          </details>
+          
+          <details class="faq-item reveal delay-300">
+            <summary class="faq-question">
+              <span data-i18n="faq.q6.question">Dodržiavate mlčanlivosť?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.q6.answer">
+              Absolútne. Všetky dokumenty a informácie sú prísne dôverné. Ako registrovaný prekladateľ som viazaný mlčanlivosťou podľa zákona.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/logo.png" alt="" width="48" height="48">
+            <span>Tatjana Grigojanova PhD.</span>
+          </a>
+          <p class="footer-desc" data-i18n="footer.description">Profesionálne prekladateľské a tlmočnícke služby medzi slovenčinou a ruštinou.</p>
+          <div class="footer-social">
+            <a href="https://www.justice.gov.sk/registre/prekladatelia/prekladatel_10651" target="_blank" rel="noopener noreferrer" aria-label="Register prekladateľov">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tatiana-grigorjanova-b9baa656/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-title" data-i18n="footer.quickLinks">Rýchle odkazy</h4>
+          <ul>
+            <li><a href="services.html" data-i18n="nav.services">Služby</a></li>
+            <li><a href="pricing.html" data-i18n="nav.pricing">Cenník</a></li>
+            <li><a href="about.html" data-i18n="nav.about">O nás</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title" data-i18n="nav.contact">Kontakt</h4>
+          <ul>
+            <li><a href="tel:+421905646524"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+421 905 646 524</a></li>
+            <li><a href="mailto:grigojanova@yas.sh"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>grigojanova@yas.sh</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4 class="footer-title" data-i18n="footer.legalInfo">Právne informácie</h4>
+          <ul>
+            <li>Reg. č. 970285</li>
+            <li>Ministerstvo spravodlivosti SR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n="footer.copyright">© 2024 Tatjana Grigojanova PhD. Všetky práva vyhradené.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Help Bot -->
+  <div class="bot-container">
+    <button class="bot-toggle" id="botToggle" aria-label="Otvoriť chat" aria-expanded="false" aria-controls="botPanel">
+      <svg class="bot-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <svg class="bot-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      <span class="bot-label" data-i18n="bot.toggleLabel">Pomocník</span>
+    </button>
+    <div class="bot-panel" id="botPanel" role="dialog" aria-label="Chat asistent" aria-hidden="true">
+      <div class="bot-header">
+        <div class="bot-avatar"><img src="assets/images/logo.png" alt=""></div>
+        <div class="bot-info">
+          <h4 class="bot-title" data-i18n="bot.title">Váš asistent</h4>
+          <p class="bot-subtitle" data-i18n="bot.subtitle">Spýtajte sa na ceny, služby alebo postup</p>
+        </div>
+        <button class="bot-close" id="botClose" aria-label="Zavrieť chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="bot-messages" id="botMessages" role="log" aria-live="polite" aria-atomic="false"></div>
+      <div class="bot-input-container">
+        <input type="text" class="bot-input" id="botInput" data-i18n-attr="placeholder" data-i18n="bot.placeholder" aria-label="Správa">
+        <button class="bot-send" id="botSend" aria-label="Odoslať správu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  
+  <!-- Scripts -->
+  <script src="i18n/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/bot.js"></script>
+  
+  <!-- Contact Form with Turnstile Integration -->
+  <script>
+    (function() {
+      const WEBHOOK_URL = "https://n8n.elsaadouni.com/webhook/yas-contacts";
+      const WEBHOOK_SECRET = "Mj1msc_6SVu12tPqCxvPka_AbC5tkSLZU5yIbPUs3Oc";
+      
+      const form = document.getElementById("contactForm");
+      const btn = document.getElementById("sendBtn");
+      const btnText = document.getElementById("sendBtnText");
+      const statusEl = document.getElementById("contactStatus");
+      const fileUpload = document.getElementById("fileUpload");
+      const dropZone = document.getElementById("dropZone");
+      const fileList = document.getElementById("fileList");
+      let attachedFiles = [];
+      
+      // Get current language from URL or HTML
+      function getCurrentLang() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        if (urlLang && ['sk', 'en', 'ru'].includes(urlLang)) return urlLang;
+        const htmlLang = document.documentElement.lang;
+        if (htmlLang && ['sk', 'en', 'ru'].includes(htmlLang)) return htmlLang;
+        return 'sk';
+      }
+      
+      function showStatus(msg, ok = true) {
+        statusEl.style.display = "block";
+        statusEl.textContent = msg;
+        statusEl.className = "form-status " + (ok ? "success" : "error");
+      }
+      
+      // File upload handling
+      function formatFileSize(bytes) {
+        if (bytes === 0) return '0 B';
+        const k = 1024;
+        const sizes = ['B', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+      }
+      
+      function renderFileList() {
+        fileList.innerHTML = '';
+        attachedFiles.forEach((file, index) => {
+          const item = document.createElement('div');
+          item.className = 'file-item';
+          item.innerHTML = `
+            <svg class="file-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <div class="file-item-info">
+              <span class="file-item-name">${file.name}</span>
+              <span class="file-item-size">${formatFileSize(file.size)}</span>
+            </div>
+            <button type="button" class="file-item-remove" data-index="${index}" aria-label="Remove file">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          `;
+          fileList.appendChild(item);
+        });
+        
+        // Add remove handlers
+        fileList.querySelectorAll('.file-item-remove').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const index = parseInt(e.currentTarget.dataset.index);
+            attachedFiles.splice(index, 1);
+            renderFileList();
+          });
+        });
+      }
+      
+      if (dropZone && fileUpload) {
+        dropZone.addEventListener('click', () => fileUpload.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          dropZone.classList.add('drag-over');
+        });
+        
+        dropZone.addEventListener('dragleave', () => {
+          dropZone.classList.remove('drag-over');
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('drag-over');
+          const files = Array.from(e.dataTransfer.files);
+          attachedFiles = attachedFiles.concat(files);
+          renderFileList();
+        });
+        
+        fileUpload.addEventListener('change', (e) => {
+          const files = Array.from(e.target.files);
+          attachedFiles = attachedFiles.concat(files);
+          renderFileList();
+          fileUpload.value = '';
+        });
+      }
+      
+      // Global Turnstile callbacks
+      window.onTurnstile = (token) => {
+        document.getElementById("tsToken").value = token || "";
+      };
+      window.onTurnstileExpired = () => {
+        document.getElementById("tsToken").value = "";
+      };
+      window.onTurnstileError = (err) => {
+        document.getElementById("tsToken").value = "";
+        console.error("Turnstile error:", err);
+      };
+      
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const hp = (document.getElementById("website").value || "").trim();
+        if (hp) return; // bot filled honeypot
+        
+        const name = (document.getElementById("name").value || "").trim();
+        const email = (document.getElementById("email").value || "").trim();
+        const subject = (document.getElementById("subject").value || "").trim();
+        const message = (document.getElementById("message").value || "").trim();
+        const tsToken = (document.getElementById("tsToken").value || "").trim();
+        
+        if (!tsToken) {
+          const lang = getCurrentLang();
+          const msg = lang === 'en' ? 'Please complete the captcha verification.' : 
+                      lang === 'ru' ? 'Пожалуйста, завершите проверку капчи.' : 
+                      'Prosím, dokončite captcha overenie.';
+          showStatus(msg, false);
+          return;
+        }
+        
+        btn.disabled = true;
+        const originalBtnText = btnText.textContent;
+        const lang = getCurrentLang();
+        btnText.textContent = lang === 'en' ? "Sending..." : lang === 'ru' ? "Отправка..." : "Odosielam...";
+        
+        try {
+          const formData = new FormData();
+          formData.append("secret", WEBHOOK_SECRET);
+          formData.append("name", name);
+          formData.append("email", email);
+          formData.append("subject", subject);
+          formData.append("message", message);
+          formData.append("page", window.location.href);
+          formData.append("website", hp);
+          formData.append("cf-turnstile-response", tsToken);
+          
+          // Add files
+          attachedFiles.forEach((file, index) => {
+            formData.append(`attachment_${index}`, file);
+          });
+          
+          const res = await fetch(WEBHOOK_URL, {
+            method: "POST",
+            body: formData,
+          });
+          
+          const text = await res.text();
+          let parsed; try { parsed = JSON.parse(text); } catch { parsed = text; }
+          
+          if (!res.ok) {
+            console.error("Webhook error:", res.status, parsed);
+            throw new Error("HTTP " + res.status);
+          }
+          
+          const lang = getCurrentLang();
+          const successMsg = lang === 'en' ? "Thank you for your message. I will get back to you soon!" : 
+                             lang === 'ru' ? "Спасибо за ваше сообщение. Я свяжусь с вами скоро!" : 
+                             "Ďakujem za vašu správu. Ozvem sa vám čoskoro!";
+          showStatus(successMsg, true);
+          form.reset();
+          attachedFiles = [];
+          renderFileList();
+          document.getElementById("tsToken").value = "";
+          if (window.turnstile) turnstile.reset();
+        } catch (err) {
+          console.error("Contact submit failed:", err);
+          const lang = getCurrentLang();
+          const errorMsg = lang === 'en' ? "Failed to send. Please try again." : 
+                           lang === 'ru' ? "Не удалось отправить. Пожалуйста, попробуйте снова." : 
+                           "Nepodarilo sa odoslať. Skúste to znova.";
+          showStatus(errorMsg, false);
+        } finally {
+          btn.disabled = false;
+          btnText.textContent = originalBtnText;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

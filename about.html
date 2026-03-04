@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nás - Tatjana Grigojanova PhD.</title>
+  <meta name="description" content="Profesionálny prístup k jazykovým službám. Registrovaný prekladateľ pri Ministerstve spravodlivosti SR č. 970285.">
+  <link rel="canonical" href="https://grigojanova.yas.sh/about.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Anti-FOUC: Prevent flash of unstyled content -->
+  <style>
+    .reveal, .reveal-left, .reveal-right, .reveal-scale {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+    .no-js .reveal, .no-js .reveal-left, .no-js .reveal-right, .no-js .reveal-scale,
+    html.js-loaded .reveal, html.js-loaded .reveal-left, html.js-loaded .reveal-right, html.js-loaded .reveal-scale {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    [data-counter] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    html.js-loaded [data-counter] {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Anti-FOUC script -->
+  <script>
+    (function() {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <a href="#main-content" class="skip-link" data-i18n="nav.skipToContent">Preskočiť na obsah</a>
+  
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Tatjana Grigojanova PhD.">
+        <img src="assets/images/logo.png" alt="" width="44" height="44">
+        <div class="logo-text">
+          <span class="logo-name">Tatjana Grigojanova</span>
+          <span class="logo-title" data-i18n="hero.badge">PhD.</span>
+        </div>
+      </a>
+      
+      <nav class="nav" role="navigation" aria-label="Hlavná navigácia">
+        <a href="index.html" data-i18n="nav.home">Domov</a>
+        <a href="about.html" class="active" data-i18n="nav.about" aria-current="page">O nás</a>
+        <a href="services.html" data-i18n="nav.services">Služby</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Cenník</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Výber jazyka">
+          <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')" aria-label="Slovenčina">
+            <img src="assets/images/flag-sk.png" alt="" class="lang-flag" width="20" height="14"><span>SK</span>
+          </button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">
+            <img src="assets/images/flag-gb.png" alt="" class="lang-flag" width="20" height="14"><span>EN</span>
+          </button>
+          <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')" aria-label="Русский">
+            <img src="assets/images/flag-ru.png" alt="" class="lang-flag" width="20" height="14"><span>RU</span>
+          </button>
+        </div>
+        
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Prepnúť režim">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        
+        <a href="contact.html" class="btn btn-primary btn-cta" data-i18n="nav.cta">Kontaktujte nás</a>
+        
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobilná navigácia" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav">
+        <a href="index.html" data-i18n="nav.home">Domov</a>
+        <a href="about.html" class="active" data-i18n="nav.about">O nás</a>
+        <a href="services.html" data-i18n="nav.services">Služby</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Cenník</a>
+        <a href="contact.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="mobile-lang-switcher">
+        <button class="lang-btn active" data-lang="sk" onclick="setLanguage('sk')"><img src="assets/images/flag-sk.png" alt="" class="lang-flag"><span>Slovenčina</span></button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')"><img src="assets/images/flag-gb.png" alt="" class="lang-flag"><span>English</span></button>
+        <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')"><img src="assets/images/flag-ru.png" alt="" class="lang-flag"><span>Русский</span></button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-header-content reveal">
+          <span class="section-label" data-i18n="about.label">O NÁS</span>
+          <h1 id="page-title" class="page-title" data-i18n="about.heroTitle">Profesionálny prístup k jazykovým službám</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="about-content">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-main reveal">
+            <!-- Profile Photo for Mobile -->
+            <div class="about-profile-mobile">
+              <div class="about-profile-photo-wrapper">
+                <img src="assets/images/Hero-001.jpg" alt="Tatjana Grigojanova PhD." class="about-profile-photo">
+                <div class="about-profile-glow"></div>
+              </div>
+              <h3 class="about-profile-name">Tatjana Grigojanova, PhD.</h3>
+              <p class="about-profile-title" data-i18n="about.profile.title">Registrovaný prekladateľ a tlmočník</p>
+            </div>
+
+            <p class="about-paragraph" data-i18n="about.description1">
+              S viac než dvadsaťročnou praxou sa špecializujem na poskytovanie prvotriednych prekladateľských a tlmočníckych služieb medzi slovenským (materinský jazyk) a ruským (5 rokov štúdia v Rusku) jazykom.
+            </p>
+            <p class="about-paragraph" data-i18n="about.description2">
+              Ako registrovaný prekladateľ pri Ministerstve spravodlivosti Slovenskej republiky (Reg. č. 970285) ponúkam certifikované preklady právnych dokumentov s úradnou platnosťou.
+            </p>
+            <p class="about-paragraph" data-i18n="about.description3">
+              Objavte rozdiel, ktorý odborné znalosti, profesionalita a hlboký rešpekt k vašim termínom môžu priniesť.
+            </p>
+
+            <!-- Extended Bio Section -->
+            <div class="about-extended">
+              <h3 class="about-extended-title" data-i18n="about.extended.backgroundTitle">Profesijné pozadie</h3>
+              <p class="about-paragraph" data-i18n="about.extended.background1">
+                Svoju kariéru v oblasti prekladateľstva a tlmočenia som začala pred viac ako dvadsiatimi rokmi. Počas štúdia v Rusku, kde som strávila päť rokov, som získala hlboké porozumenie ruskej jazykovej kultúry, nuánsam a odbornej terminológii.
+              </p>
+              <p class="about-paragraph" data-i18n="about.extended.background2">
+                Po návrate na Slovensko som sa rozhodla venovať profesionálnemu prekladateľstvu a získala som registráciu pri Ministerstve spravodlivosti SR. Táto registrácia umožňuje mojim prekladom mať úradnú platnosť na všetkých štátnych inštitúciách.
+              </p>
+              
+              <h3 class="about-extended-title" data-i18n="about.extended.expertiseTitle">Odborná expertíza</h3>
+              <p class="about-paragraph" data-i18n="about.extended.expertise1">
+                Špecializujem sa najmä na právne a úradné dokumenty, vrátane zmlúv, rozsudkov, rodných a sobášnych listov, diplomov a policajných správ. Moje služby využívajú jednotlivci, právnické firmy, súdy, polícia aj podnikatelia.
+              </p>
+              <p class="about-paragraph" data-i18n="about.extended.expertise2">
+                V oblasti tlmočenia mám rozsiahle skúsenosti so súdnym tlmočením, tlmočením pri policajných výsluchoch, obchodných rokovaniach a oficiálnych stretnutiach. Disponujem certifikátmi potrebnými pre výkon súdneho tlmočníka.
+              </p>
+
+              <h3 class="about-extended-title" data-i18n="about.extended.educationTitle">Vzdelanie a certifikácie</h3>
+              <ul class="about-credentials-list">
+                <li data-i18n="about.extended.edu1">PhD. v odbore jazykové štúdiá</li>
+                <li data-i18n="about.extended.edu2">5 rokov štúdia ruštiny v Rusku</li>
+                <li data-i18n="about.extended.edu3">Registrovaný prekladateľ MS SR č. 970285</li>
+                <li data-i18n="about.extended.edu4">Certifikát súdneho tlmočníka</li>
+                <li data-i18n="about.extended.edu5">Nepretržité vzdelávanie v právnej terminológii</li>
+              </ul>
+
+              <h3 class="about-extended-title" data-i18n="about.extended.approachTitle">Prístup k práci</h3>
+              <p class="about-paragraph" data-i18n="about.extended.approach">
+                Ku každému projektu pristupujem individuálne s maximálnou precíznosťou a rešpektom k termínom. Verím, že kvalitný preklad nie je len o prenesení slov z jedného jazyka do druhého, ale o zachovaní významu, tónu a intencie originálneho textu. Dôvernosť a diskrétnosť sú pre mňa samozrejmosťou.
+              </p>
+            </div>
+          </div>
+          
+          <aside class="about-sidebar reveal delay-200">
+            <!-- Profile Photo for Desktop -->
+            <div class="about-profile-desktop">
+              <div class="about-profile-photo-wrapper-large">
+                <img src="assets/images/Hero-001.jpg" alt="Tatjana Grigojanova PhD." class="about-profile-photo-large">
+                <div class="about-profile-ring ring-1"></div>
+                <div class="about-profile-ring ring-2"></div>
+              </div>
+              <h3 class="about-profile-name text-center">Tatjana Grigojanova, PhD.</h3>
+              <p class="about-profile-title text-center" data-i18n="about.profile.title">Registrovaný prekladateľ a tlmočník</p>
+            </div>
+
+            <div class="credentials-panel">
+              <h3 class="credentials-panel-title" data-i18n="about.credentials.title">Kvalifikácia a registrácia</h3>
+              
+              <div class="credential-item">
+                <div class="credential-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                  </svg>
+                </div>
+                <div class="credential-content">
+                  <p class="credential-label" data-i18n="about.credentials.registration">Registrácia Ministerstva spravodlivosti SR</p>
+                  <p class="credential-value" data-i18n="about.credentials.regNumber">Registračné číslo: 970285</p>
+                </div>
+              </div>
+              
+              <div class="credential-item">
+                <div class="credential-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </div>
+                <div class="credential-content">
+                  <p class="credential-label" data-i18n="about.credentials.languages">Jazykové kombinácie</p>
+                  <p class="credential-value" data-i18n="about.credentials.langPair">Slovenčina ↔ Ruština</p>
+                </div>
+              </div>
+              
+              <div class="credential-item">
+                <div class="credential-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div class="credential-content">
+                  <p class="credential-label" data-i18n="about.credentials.experience">Skúsenosti</p>
+                  <p class="credential-value" data-i18n="about.credentials.experienceValue">20+ rokov praxe</p>
+                </div>
+              </div>
+
+              <div class="credential-item">
+                <div class="credential-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+                    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                  </svg>
+                </div>
+                <div class="credential-content">
+                  <p class="credential-label" data-i18n="about.credentials.specialization">Špecializácia</p>
+                  <p class="credential-value" data-i18n="about.credentials.specializationValue">Právne a úradné preklady</p>
+                </div>
+              </div>
+              
+              <div class="credential-badge">
+                <img src="assets/images/logo.png" alt="" width="64" height="64">
+                <p class="credential-badge-text" data-i18n="about.credentials.badgeText">Dôveryhodnosť a profesionalita</p>
+              </div>
+            </div>
+
+            <!-- Quick Contact Card -->
+            <div class="about-contact-card">
+              <h3 class="about-contact-title" data-i18n="about.contactCard.title">Rýchly kontakt</h3>
+              <a href="tel:+421905646524" class="about-contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +421 905 646 524
+              </a>
+              <a href="mailto:grigojanova@yas.sh" class="about-contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <path d="M22 6l-10 7L2 6"/>
+                </svg>
+                grigojanova@yas.sh
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-content reveal">
+          <h2 id="cta-title" class="cta-title" data-i18n="about.cta.title">Pripravení začať spoluprácu?</h2>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg magnetic-btn" data-i18n="about.cta.button">
+              Kontaktujte nás
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/logo.png" alt="" width="48" height="48">
+            <span>Tatjana Grigojanova PhD.</span>
+          </a>
+          <p class="footer-desc" data-i18n="footer.description">Profesionálne prekladateľské a tlmočnícke služby medzi slovenčinou a ruštinou.</p>
+          <div class="footer-social">
+            <a href="https://www.justice.gov.sk/registre/prekladatelia/prekladatel_10651" target="_blank" rel="noopener noreferrer" aria-label="Register prekladateľov">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tatiana-grigorjanova-b9baa656/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4 class="footer-title" data-i18n="footer.quickLinks">Rýchle odkazy</h4>
+          <ul>
+            <li><a href="services.html" data-i18n="nav.services">Služby</a></li>
+            <li><a href="pricing.html" data-i18n="nav.pricing">Cenník</a></li>
+            <li><a href="about.html" data-i18n="nav.about">O nás</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title" data-i18n="nav.contact">Kontakt</h4>
+          <ul>
+            <li><a href="tel:+421905646524"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+421 905 646 524</a></li>
+            <li><a href="mailto:grigojanova@yas.sh"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>grigojanova@yas.sh</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4 class="footer-title" data-i18n="footer.legalInfo">Právne informácie</h4>
+          <ul>
+            <li>Reg. č. 970285</li>
+            <li>Ministerstvo spravodlivosti SR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n="footer.copyright">© 2024 Tatjana Grigojanova PhD. Všetky práva vyhradené.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="bot-container">
+    <div class="bot-panel" id="botPanel" role="dialog" aria-label="Chat asistent" aria-hidden="true">
+      <div class="bot-header">
+        <div class="bot-avatar"><img src="assets/images/logo.png" alt=""></div>
+        <div class="bot-info">
+          <h4 class="bot-title" data-i18n="bot.title">Váš asistent</h4>
+          <p class="bot-subtitle" data-i18n="bot.subtitle">Spýtajte sa na ceny, služby alebo postup</p>
+        </div>
+        <button class="bot-close" id="botClose" aria-label="Zavrieť chat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="bot-messages" id="botMessages" role="log" aria-live="polite" aria-atomic="false"></div>
+      <div class="bot-input-container">
+        <input type="text" class="bot-input" id="botInput" placeholder="Napíšte vašu otázku..." aria-label="Správa">
+        <button class="bot-send" id="botSend" aria-label="Odoslať správu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="bot-toggle" id="botToggle" aria-label="Otvoriť chat" aria-expanded="false" aria-controls="botPanel">
+      <svg class="bot-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <svg class="bot-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      <span class="bot-label" data-i18n="bot.toggleLabel">Pomocník</span>
+    </button>
+  </div>
+
+  <script src="i18n/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/bot.js"></script>
+</body>
+</html>

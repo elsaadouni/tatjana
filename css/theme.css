@@ -1,0 +1,173 @@
+/**
+ * ============================================================================
+ * THEME.CSS - Glassmorphism Design System
+ * ============================================================================
+ * Unique aesthetic: Dark glassmorphism with neon cyan accents
+ * ============================================================================
+ */
+
+:root {
+  /* Primary - Neon Cyan */
+  --primary: #00D4AA;
+  --primary-rgb: 0, 212, 170;
+  --primary-light: #00FFD1;
+  --primary-dark: #00A884;
+  --primary-alpha: rgba(0, 212, 170, 0.1);
+  --primary-alpha-strong: rgba(0, 212, 170, 0.2);
+  --primary-contrast: #0A0A0F;
+  
+  /* Secondary - Electric Violet */
+  --secondary: #7C3AED;
+  --secondary-rgb: 124, 58, 237;
+  --secondary-light: #A78BFA;
+  --secondary-dark: #5B21B6;
+  --secondary-alpha: rgba(124, 58, 237, 0.15);
+  
+  /* Accent - Hot Pink */
+  --accent: #EC4899;
+  --accent-rgb: 236, 72, 153;
+  --accent-light: #F472B6;
+  --accent-alpha: rgba(236, 72, 153, 0.15);
+  
+  /* Background Colors - Deep Dark */
+  --bg: #0A0A0F;
+  --bg-alt: #111118;
+  --bg-elevated: #16161F;
+  --surface: rgba(22, 22, 31, 0.8);
+  --surface-hover: rgba(30, 30, 42, 0.9);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(22, 22, 31, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-strong: rgba(255, 255, 255, 0.15);
+  
+  /* Text Colors */
+  --text: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #0A0A0F;
+  
+  /* Border Colors */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.04);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  
+  /* Status Colors */
+  --success: #10B981;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --success-text: #34D399;
+  --error: #EF4444;
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --error-text: #F87171;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  
+  /* Glow Effects */
+  --glow-primary: 0 0 40px rgba(0, 212, 170, 0.4);
+  --glow-secondary: 0 0 40px rgba(124, 58, 237, 0.4);
+  --glow-accent: 0 0 40px rgba(236, 72, 153, 0.4);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.6);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 48px;
+  --radius-full: 9999px;
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.625rem;
+  --text-6xl: 3.5rem;
+  --text-7xl: 5rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-Index Scale */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  
+  /* Container */
+  --container-max: 1280px;
+  --container-padding: 1.5rem;
+}
+
+/* Light Theme Override */
+[data-theme="light"] {
+  --bg: #F1F5F9;
+  --bg-alt: #E2E8F0;
+  --bg-elevated: #FFFFFF;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-hover: rgba(255, 255, 255, 1);
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border-strong: rgba(0, 0, 0, 0.15);
+  
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+  
+  --border: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --border-strong: rgba(0, 0, 0, 0.15);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 64px rgba(0, 0, 0, 0.15);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0.01ms;
+    --transition-base: 0.01ms;
+    --transition-slow: 0.01ms;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
