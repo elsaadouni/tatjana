@@ -331,7 +331,7 @@ Gradient text:
 
 Webhook URL and secret are in `contact.html`:
 ```javascript
-const WEBHOOK_URL = "https://n8n.elsaadouni.com/webhook/yas-contacts";
+const WEBHOOK_URL = "https://n8n.elsaadouni.com/webhook/papki";
 const WEBHOOK_SECRET = "your-secret-here";
 ```
 

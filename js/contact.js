@@ -49,7 +49,7 @@
   // ==========================================================================
   const CONFIG = {
     // REPLACE THIS WITH YOUR ACTUAL ENDPOINT
-    CONTACT_ENDPOINT: 'https://n8n.elsaadouni.com/webhook/papki',
+    CONTACT_ENDPOINT: 'REPLACE_ME',
     
     // File upload settings
     maxFileSize: 5 * 1024 * 1024, // 5MB

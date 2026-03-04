@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt - Tatjana Grigojanova PhD.</title>
   <meta name="description" content="Kontaktujte nás pre profesionálne prekladateľské služby. Telefón: +421 905 646 524, Email: grigojanova@yas.sh">
-  <link rel="canonical" href="https://grigojanova.yas.sh/contact.html">
+  <link rel="canonical" href="https://tatjana.yas.sh/contact.html">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -591,6 +591,11 @@
           
           const res = await fetch(WEBHOOK_URL, {
             method: "POST",
+            mode: "cors",
+            credentials: "omit",
+            headers: {
+              "Origin": window.location.origin
+            },
             body: formData,
           });
           
@@ -615,9 +620,19 @@
         } catch (err) {
           console.error("Contact submit failed:", err);
           const lang = getCurrentLang();
-          const errorMsg = lang === 'en' ? "Failed to send. Please try again." : 
-                           lang === 'ru' ? "Не удалось отправить. Пожалуйста, попробуйте снова." : 
-                           "Nepodarilo sa odoslať. Skúste to znova.";
+          let errorMsg;
+          // Check if it's a CORS or network error
+          if (err.name === 'TypeError' && err.message === 'Failed to fetch') {
+            errorMsg = lang === 'en' 
+              ? "Network error. Please email us directly at grigojanova@yas.sh" 
+              : lang === 'ru' 
+              ? "Ошибка сети. Пожалуйста, напишите нам напрямую на grigojanova@yas.sh" 
+              : "Chyba siete. Prosím, napíšte nám priamo na grigojanova@yas.sh";
+          } else {
+            errorMsg = lang === 'en' ? "Failed to send. Please try again." : 
+                       lang === 'ru' ? "Не удалось отправить. Пожалуйста, попробуйте снова." : 
+                       "Nepodarilo sa odoslať. Skúste to znova.";
+          }
           showStatus(errorMsg, false);
         } finally {
           btn.disabled = false;
